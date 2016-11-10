@@ -1,0 +1,74 @@
+<!-- 
+	construire un formulaire
+	les fonctions utile : 	- serialize() => à verifier sur le mdn
+							- var form = $('form'); // recupere le formulaire
+							- var data = form.serialize(); // à verifier avec un console.log();
+
+	- creer un formulaire avec : 
+		- champ prénom
+		- champ message limité à 140 caractères et afficher le nombre de caractère restant
+		bloque l'affichage quand le nombre de caractère est attient
+		- bouton valider (disabled si aucun caractère )
+
+		- traitement côté serveur :
+		* cryptage du message (césar, vigenere )
+		* chaine inverse => textarea message
+ -->
+
+
+ <!DOCTYPE html>
+ <html>
+	 <head>
+
+	 	<meta charset="utf-8">
+	 	<title>Exercice 5</title>
+
+	 	<!-- insertion du style CSS -->
+	 		<!-- CSS Bootstrap -->
+	 			<!-- Latest compiled and minified CSS -->
+	 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	 		<!-- Mon Style -->
+	 			<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	 </head>
+
+	 <body>
+
+	 	<form>
+
+	 		<p>
+		 		<label for="prenom" >Votre prénom : </label>
+		 		<input class="form" type="text" name="prenom" id="prenom" val="" />
+			</p>
+			<p>
+				<label for="message" >Message : </label>
+				<textarea class="form" type="textarea" maxlength="140" name="message" id="message" placeholder=" Max 140 caractères." ></textarea>
+				<p id="caraRest"> 0 caractère sur 140</p>
+			</p>
+			<p>
+				<button id="button" name="envoyer" >Envoyer</button>
+			</p>
+			<p class='erreur'></p>
+	 		
+
+
+	 	</form>
+
+	 	<!-- insertion du Script -->
+
+	 		<!-- jQuery -->
+	 			<script
+		 		  src="https://code.jquery.com/jquery-2.2.4.min.js"
+		 		  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		 		  crossorigin="anonymous"></script>
+
+	 		 <!-- JavaScript Bootstrap -->
+	 		 	<!-- Latest compiled and minified JavaScript -->
+	 		 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	 		 <!-- Mon scritp -->
+	 		 	<script type="text/javascript" src="js/script.js"></script>
+
+	 
+	 </body>
+ </html>
