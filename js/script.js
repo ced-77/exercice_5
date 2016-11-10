@@ -55,7 +55,12 @@ $(document).ready(function(){
 
 	// activation du bouton du formulaire
 		$('.form').on('keyup', function(){
-			$('#button').css('display','initial');
+
+			if ( $('#prenom').val().length > 0 || $('#message').val().length >0 ) {
+
+				$('#button').css('display','initial');
+			} else { $('#button').css('display','none'); }
+			
 		})
 
 
@@ -77,10 +82,7 @@ $(document).ready(function(){
 
 					$('#caraRest').text(msg);
 
-					if restant >0 {
-						$('#button').css('display','initial');
-
-					} else { $('#button').css('display','none');}
+					
 		// fin de la fonction de comptage des caractères
 		};
 
