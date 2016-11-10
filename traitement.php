@@ -9,6 +9,7 @@
 
 		// post non vide on le recupere
 			$chaine = $_POST['donnees'];
+		// commentairea
 
 
 		// on retranscrit la chaine récupere en tableau pour recupere les donnée
